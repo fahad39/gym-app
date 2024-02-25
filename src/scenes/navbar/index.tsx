@@ -63,6 +63,12 @@ const Navbar = ({selectedPage,setSelectedPage}: Props) => {
         </div>
       </div>
     </div>
+    {/* Mobile menu modal */}
+    {!isAboveMediumScreens && isMenuToggled&& (
+      <div className="fixed right-0 bottom-0 z-40 h-full w-300px bg-primary-100 drops-shadow-1">
+
+      </div>
+    )}
    </nav>
   )
 }
