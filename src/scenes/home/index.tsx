@@ -7,6 +7,8 @@ import SponsorForbes from "@/assets/SponsorForbes.png"
 import SponsorRedBull from "@/assets/SponsorRedBull.png"
 import SponsorFortune from "@/assets/SponsorFortune.png"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { motion } from 'framer-motion'
+
 
 
 type Props = {
@@ -20,24 +22,47 @@ const Home = ({setSelectedPage}: Props) => {
   return (
     <section id="home" className='gap-16 bg-gray-20 py-10 md:h-full md:pb-0'>
         {/* Image and main header */}
-        <div>
+        <motion.div 
+            className='mx-auto w-5/6 items-center justify-center md:h-5/6 md:flex'
+            onViewportEnter={()=>setSelectedPage(SelectedPage.Home)}
+        >
             {/* main header */}
-            <div>
+            <div className='z-10 mt-32 md:basis-3/5'>
                 {/* headings */}
-                <div>
-                    <div>
-                        <div>
+                <motion.div 
+                    className='md:-mt-20'
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once:true, amount:0.5}}
+                    transition={{duration:0.5}}
+                    variants={{
+                        hidden:{opacity:0, x:-50},
+                        visible:{opacity:1, x:0}
+                    }}
+                >
+                    <div className='relative'>
+                        <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext'>
                             <img alt='home-page-text' src={HomePageText} />
                         </div>
                     </div>
-                    <p>
+                    <p className='mt-8 text-sm md:text-start'>
                         Unrival Gym. Unparaled Trainig Fitness Classes.
                         Studio to get the Body shapes that you dream of... 
                         Body now.
                     </p>
-                </div>
+                </motion.div>
                 {/* actions */}
-                <div>
+                <motion.div 
+                    className='mt-8 flex items-center gap-8 '
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once:true, amount:0.5}}
+                    transition={{delay:0.2, duration:0.5}}
+                    variants={{
+                        hidden:{opacity:0, x:-50},
+                        visible:{opacity:1, x:0}
+                    }}
+                >
                     <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
                     <AnchorLink 
                         className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
@@ -46,15 +71,27 @@ const Home = ({setSelectedPage}: Props) => {
                     >
                         <p>Learn More</p>
                     </AnchorLink>
-                </div>
+                </motion.div>
             </div>
 
             {/* image  */}
 
-            <div>
+            <div className='flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end'>
                 <img alt='home-pageGraphic' src={HomePageGraphic} />
             </div>
-        </div>
+        </motion.div>
+        {/* Sponsors */}
+        {isAboveMediumScreens && (
+            <div className='h-[150px] w-full bg-primary-100 py-10'>
+                <div className='mx-auto w-5/6'>
+                    <div className='flex w-3/5 items-center justify-between gap-8'>
+                        <img alt="redbull-sponsor" src={SponsorRedBull} />
+                        <img alt="forbes-sponsor" src={SponsorForbes} />
+                        <img alt="fortune-sponsor" src={SponsorFortune} />
+                    </div>
+                </div>
+            </div>
+        )}
     </section>
   )
 }
