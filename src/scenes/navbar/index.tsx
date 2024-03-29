@@ -50,7 +50,7 @@ const Navbar = ({isTopOfPage,selectedPage,setSelectedPage}: Props) => {
                   setSelectedPage={setSelectedPage}
                 />
               </div>
-              <div className={`${flexBetween} gap-8`}>
+              <div className={`${flexBetween} gap-8 text-gray-500`}>
                 <p>Sign In</p>
                 <ActionButton setSelectedPage={setSelectedPage}>Become a Member</ActionButton>
               </div>
@@ -60,7 +60,7 @@ const Navbar = ({isTopOfPage,selectedPage,setSelectedPage}: Props) => {
               onClick={()=>setIsMenuToggled(!isMenuToggled)}
             >
               <Bars3Icon 
-                className="h-6 w-6 text-white"
+                className="h-5 w-5 text-white"
               />
             </button>
           } 
@@ -69,7 +69,7 @@ const Navbar = ({isTopOfPage,selectedPage,setSelectedPage}: Props) => {
     </div>
     {/* Mobile menu modal */}
     {!isAboveMediumScreens && isMenuToggled&& (
-      <div className="fixed right-0 bottom-0 z-40 h-full w-300px bg-primary-100 drop-shadow-xl">
+      <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
         {/* Close icon */}
         <div className="flex justify-end p-12">
           <button
