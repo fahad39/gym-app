@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
-import HText from "@/shared/HText";
+import HText from "@/shared/Htext";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;

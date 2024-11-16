@@ -1,5 +1,5 @@
 import ActionButton from "@/shared/ActionButton";
-import HText from "@/shared/HText";
+import HText from "@/shared/Htext";
 import { BenefitType, SelectedPage } from "@/shared/types";
 import {
   HomeModernIcon,
