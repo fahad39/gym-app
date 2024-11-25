@@ -6,40 +6,44 @@ import image4 from "@/assets/image4.png";
 import image5 from "@/assets/image5.png";
 import image6 from "@/assets/image6.png";
 import { motion } from "framer-motion";
-import HText from "@/shared/Htext";
+import HeadingText from "@/shared/HeadingText";
 import Class from "./Class";
 
 const classes: Array<ClassType> = [
   {
     name: "Weight Training Classes",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Build strength, sculpt your body, and achieve your fitness goals. Our weight training classes, led by experienced trainers, will guide you through effective exercises to help you reach your full potential.",
     image: image1,
   },
   {
     name: "Yoga Classes",
+    description:
+      "Find your inner peace. Our yoga classes offer a serene and calming environment to reduce stress, improve flexibility, and promote overall well-being.",
     image: image2,
   },
   {
     name: "Ab Core Classes",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Sculpt your core and strengthen your entire body. Our ab core classes target your abdominal muscles, lower back, and obliques to improve stability, posture, and overall fitness.",
     image: image3,
   },
   {
     name: "Adventure Classes",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Push your limits, challenge yourself. Our adventure classes combine physical exertion with mental clarity, helping you build strength, endurance, and confidence.",
     image: image4,
   },
   {
     name: "Fitness Classes",
+    description:
+      "Transform your body, improve your health. Our fitness classes offer a variety of workouts to help you reach your fitness goals, from strength training and cardio to flexibility and balance.",
     image: image5,
   },
   {
     name: "Training Classes",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Learn at your own pace, with personalized support. Our training classes provide flexible learning options and dedicated instructors to help you achieve your goals.",
     image: image6,
   },
 ];
@@ -66,12 +70,11 @@ const OurClasses = ({ setSelectedPage }: Props) => {
           }}
         >
           <div className="md:w-3/5">
-            <HText>OUR CLASSES</HText>
+            <HeadingText>OUR CLASSES</HeadingText>
             <p className="py-5">
-              Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-              tellus quam porttitor. Mauris velit euismod elementum arcu neque
-              facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-              enim mattis odio in risus nunc.
+              Find your perfect workout match. Our extensive class schedule
+              offers a variety of fun and effective options, including strength
+              training, cardio, dance, and mind-body practices.
             </p>
           </div>
         </motion.div>

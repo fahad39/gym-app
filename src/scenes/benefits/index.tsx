@@ -1,5 +1,5 @@
 import ActionButton from "@/shared/ActionButton";
-import HText from "@/shared/Htext";
+import HeadingText from "@/shared/HeadingText";
 import { BenefitType, SelectedPage } from "@/shared/types";
 import {
   HomeModernIcon,
@@ -15,19 +15,19 @@ const benefits: Array<BenefitType> = [
     icon: <HomeModernIcon className="h-6 w-6" />,
     title: "State of the Art Facilities",
     description:
-      "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
+      "Top-of-the-line machines for strength training, cardio.Saunas, steam rooms, and massage therapy to aid recovery and relaxation.",
   },
   {
     icon: <UserGroupIcon className="h-6 w-6" />,
     title: "100's of Diverse Classes",
     description:
-      "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
+      "A variety of classes like yoga, Pilates, Zumba, and HIIT. Immersive workouts that make exercise fun and engaging.",
   },
   {
     icon: <AcademicCapIcon className="h-6 w-6" />,
     title: "Expert and Pro Trainers",
     description:
-      "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
+      "Customized workout plans and one-on-one coaching from certified trainers.Expert advice on diet and nutrition for optimal performance.",
   },
 ];
 
@@ -60,7 +60,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <HText>MORE THAN JUST GYM.</HText>
+          <HeadingText>MORE THAN JUST GYM.</HeadingText>
           <p className="my-5 text-sm">
             We provide world class fitness equipment, trainers and classes to
             get you to your ultimate fitness goals with ease. We provide true
@@ -100,7 +100,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           <div>
             {/* TITLE */}
             <div className="relative">
-              <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+              <div className="before:absolute before:-left-20 before:-top-20 before:z-[1] before:content-abstractwaves">
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
@@ -111,10 +111,10 @@ const Benefits = ({ setSelectedPage }: Props) => {
                     visible: { opacity: 1, x: 0 },
                   }}
                 >
-                  <HText>
+                  <HeadingText>
                     MILLIONS OF HAPPY MEMBERS GETTING{" "}
                     <span className="text-primary-500">FIT</span>
-                  </HText>
+                  </HeadingText>
                 </motion.div>
               </div>
             </div>
@@ -131,18 +131,12 @@ const Benefits = ({ setSelectedPage }: Props) => {
               }}
             >
               <p className="my-5">
-                Nascetur aenean massa auctor tincidunt. Iaculis potenti amet
-                egestas ultrices consectetur adipiscing ultricies enim. Pulvinar
-                fames vitae vitae quis. Quis amet vulputate tincidunt at in
-                nulla nec. Consequat sed facilisis dui sit egestas ultrices
-                tellus. Ullamcorper arcu id pretium sapien proin integer nisl.
-                Felis orci diam odio.
-              </p>
-              <p className="mb-5">
-                Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-                tellus quam porttitor. Mauris velit euismod elementum arcu neque
-                facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-                enim mattis odio in risus nunc.
+                Millions of members worldwide have chosen EvoGym as their
+                partner in health and fitness. Our state-of-the-art facilities,
+                expert trainers, and diverse range of classes cater to
+                individuals of all fitness levels, empowering them to achieve
+                their goals. Join our thriving community and experience the
+                transformative power of fitness.
               </p>
             </motion.div>
 
